@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+// import {SvgCircleTest} from './SvgCircleTest';
+// import {SvgCircleStrokePie} from './SvgCircleStrokePie';
+// import {SvgCircleSplit} from './SvgCircleSplit';
+// import {split10} from './Svgs'
+// import {Example} from './InARowAnim';
 import './App.css';
-import {Example} from './InARowAnim';
-import {SvgCircleTest} from './SvgCircleTest';
-import {SvgCircleStrokePie} from './SvgCircleStrokePie';
-import {SvgCircleSplit} from './SvgCircleSplit';
-import {split10} from './Svgs'
 import Slider from '@material-ui/core/Slider';
 import {useState, useEffect} from 'react'
 
@@ -106,7 +106,7 @@ function App() {
   }
 
   const [currentPie, setCurrentPie] = useState(2)
-  const [devidedByArr, setDevidedByArr] = useState([0])
+  // const [devidedByArr, setDevidedByArr] = useState([0])
 
   const [marksTop, setMarksTop] = useState([{value:1, label: 1,}]) 
   const marksBottom = [1,2,3,4,5,6,7,8,9,10].map(i => {return {value:i, label: i,}})
@@ -172,7 +172,6 @@ function App() {
 
         <motion.div 
           className="content-container"
-          className="container"
           variants={container}
           initial="hidden"
           animate="visible"
@@ -206,7 +205,7 @@ function App() {
               animate="visible"
             >
             <rect width="212.13" height="212.13" fill="white"/>
-              {currentPie != 1 ? piesDPaths[currentPie].map((dpath, idx) => (
+              {currentPie !== 1 ? piesDPaths[currentPie].map((dpath, idx) => (
                   <motion.path 
                     variants={svgItem}
                     initial="hidden"

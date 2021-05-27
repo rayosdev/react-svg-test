@@ -193,7 +193,7 @@ export const InteractiveAssignment01 = () => {
                 animate="visible"
             >
             <rect width="212.13" height="212.13" fill="white"/>
-                {currentPie != 1 ? piesDPaths[currentPie].map((dpath, idx) => (
+                {currentPie !== 1 ? piesDPaths[currentPie].map((dpath, idx) => (
                     <motion.path 
                     variants={svgItem}
                     initial="hidden"
